@@ -1,4 +1,4 @@
-export interface Imedia {
+export interface MediaProps {
     sm : number
     md: number
     lg: number

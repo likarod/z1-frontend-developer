@@ -1,9 +1,16 @@
-import { Card } from "./Card"
+import { Info } from "./Info"
+import { Button } from "./Button"
 
-import { Bank } from "../styles/Bank.style"
-import { Content } from "../styles/Content.style"
-import { Line } from "../styles/Line.style"
-import {Title} from "../styles/Title.style"
+//Styles
+import { Bank } from "../styles/Main/Bank.style"
+import { Content } from "../styles/Main/Content.style"
+import { Container } from "../styles/Container.style"
+import { Line } from "../styles/Main/Line.style"
+import { CardStyle } from "../styles/Card/Card.style"
+
+
+
+
 
 
 export const Main = () => {
@@ -15,17 +22,13 @@ export const Main = () => {
                 </div>
                 <Line/>
                 <article>
-                    <div>
-                        <Title>
-                            Scan your ID
-                        </Title>
-                        Take a picture. It may take time to validate your personal information.
-                    </div>
-                    <div>
-                        <Card/>
-                    </div>  
+                    <Info/>
+                    <Container>
+                        <CardStyle>
+                            <Button/>
+                        </CardStyle>
+                    </Container> 
                 </article>
-                
             </Content>
         </>
     )
