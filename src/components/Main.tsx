@@ -1,12 +1,12 @@
 import { Info } from "./Info"
-import { Button } from "./Button"
-
+import { Card } from "./Card"
 //Styles
 import { Bank } from "../styles/Main/Bank.style"
 import { Content } from "../styles/Main/Content.style"
-import { Container } from "../styles/Container.style"
 import { Line } from "../styles/Main/Line.style"
-import { CardStyle } from "../styles/Card/Card.style"
+import { ImageProvider } from "../context/ImageContext"
+
+
 
 
 
@@ -14,22 +14,21 @@ import { CardStyle } from "../styles/Card/Card.style"
 
 
 export const Main = () => {
+
     return (
         <> 
+        <ImageProvider>
             <Content>
                 <div>
                     <Bank>BankClient</Bank>
                 </div>
                 <Line/>
                 <article>
-                    <Info/>
-                    <Container>
-                        <CardStyle>
-                            <Button/>
-                        </CardStyle>
-                    </Container> 
+                    <Info/> 
+                    <Card src="hola" alt="prueba" status={false} /> 
                 </article>
             </Content>
+        </ImageProvider>
         </>
     )
 }

@@ -1,7 +1,9 @@
 import React, { useState } from "react"
+import { Link } from "react-router-dom";
 
-import {Camera} from './Camera'
-import { ButtonStyle, Label } from "../styles/ButtonStyle.style"
+import { ButtonStyle } from "../styles/ButtonStyle.style"
+
+
 
 
 export const Button = () => {
@@ -22,11 +24,12 @@ export const Button = () => {
 
     return(
         <>  
-            <ButtonStyle onClick={changeName}>
-                <Label>{text}</Label>
-                <Camera></Camera>   
-            </ButtonStyle>
-             
+            <Link to="/camara"> 
+                <ButtonStyle onClick={changeName} value={text}>
+                    {/* <Label>{text}</Label>
+                    <Camera></Camera>    */}
+                </ButtonStyle>
+            </Link>
         </>
     )
 }

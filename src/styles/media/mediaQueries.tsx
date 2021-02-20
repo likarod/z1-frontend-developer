@@ -1,6 +1,6 @@
-import { MediaProps } from "../../interface/MediaProps";
+import { IMediaProps } from "../../interface/MediaProps";
 
-export const breakpoints:MediaProps = {
+export const breakpoints:IMediaProps = {
     sm: 25.39,
     md: 30,
     lg: 48,

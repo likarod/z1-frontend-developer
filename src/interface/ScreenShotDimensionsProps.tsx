@@ -1,4 +1,4 @@
-export interface videoConstraintProps {
+export interface ScreenShotDimensions {
     width: number
     heigth: number
     aspectRatio: number
