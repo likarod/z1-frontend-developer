@@ -2,8 +2,10 @@
 import React from "react";
 import { IFormat } from "../interface/imageProps";
 
-import { CardStyle } from "../styles/Card/Card.style";
-import { Container } from "../styles/Container.style";
+
+
+// import { CardStyle } from "../styles/Card/Card.style";
+// import { Container } from "../styles/Container.style";
 
 
 export const Card = ({src , alt, status}:IFormat) => {
@@ -11,11 +13,12 @@ export const Card = ({src , alt, status}:IFormat) => {
 
     return (
         <>  
-            <Container>
+
+            {/* <Container>
                 <CardStyle>
                         
                 </CardStyle>
-            </Container> 
+            </Container>  */}
 
             {/* Renderizar la última foto que haya en el CONTEXT este será el consumer */}
             {/* {imgSrc && (
