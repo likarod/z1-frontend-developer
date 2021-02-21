@@ -1,8 +1,8 @@
 export interface IFormat {
     src: string
-    alt?: string
+    alt: string
     children?: React.ReactNode
-    status: boolean
+    status?: boolean
 }
   
 export type ContextType = {

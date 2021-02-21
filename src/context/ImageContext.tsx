@@ -2,11 +2,11 @@
 import { ContextType, IFormat } from "../interface/imageProps"
 import { createContext, useState } from "react"
 
-const imageContext = createContext<ContextType | null>(null)
+export const ImageContext = createContext<ContextType | null>(null)
 
 export const ImageProvider:React.FC<React.ReactNode> = ( {children}) => {
     const [image, setImage] = useState<IFormat[]>([
-        {
+        {   //Mockeo de la imagen
             src: "./assets/id_card.png",
             alt: "Id de prueba",
             status: true
@@ -23,8 +23,8 @@ export const ImageProvider:React.FC<React.ReactNode> = ( {children}) => {
     };
 
     return (
-        <imageContext.Provider value={{ image, saveImage}}>
+        <ImageContext.Provider value={{ image, saveImage}}>
             {children}
-        </imageContext.Provider>
+        </ImageContext.Provider>
     )
 }

@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import IdCard from '../../assets/Id/id_bg.svg'
 
-export const CardStyle = styled.div`
+export const CardStyle = (styled.div)`
     display:flex;
     align-items: center;
     height: 10rem;
@@ -9,7 +8,7 @@ export const CardStyle = styled.div`
     margin: 1.68rem;
     border-radius: 0.72rem;
     background-color: #FFFFFF;
-    background-image: url(${IdCard});
+    background-image: url(${prop => prop && ""} );
     background-repeat: no-repeat;
     background-position: center;
     background-size: 13.56rem  7.75rem;

@@ -9,7 +9,7 @@ export const ButtonStyle = styled.button`
     background-color: #2F0079;
 `
 
-export const ValueStyle = styled.label`
+export const ValueStyle = styled.span`
 height: 24px;
 width: 135.75px;
 color: #FFFFFF;

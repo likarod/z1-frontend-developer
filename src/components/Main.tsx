@@ -5,7 +5,6 @@ import { ImageProvider } from "../context/ImageContext"
 import { Info } from "./Info"
 import { Card } from "./Card"
 import { Button } from "./Button";
-import Cam from "./Cam";
 
 //Styles
 import {ThemeProvider } from 'styled-components';
@@ -39,15 +38,10 @@ export const Main:React.FC = () => {
                             <Bank>BankClient</Bank>
                         </div>
                         <Line/>            
-                        <article>
-                            <Info theme={theme}/>
-                            <Container>                
-                                <Card src="hola" alt="prueba" status={false} /> 
-                                <Button theme={theme} toggleTheme={toggleTheme}>
-                                </Button> 
-                                <Cam></Cam>
-                            </Container> 
-                        </article>
+                        <Info theme={theme}/>
+                        <Container>                
+                            <Card/>  
+                        </Container> 
                     </ImageProvider>
                 {/*
                     Idea: Realizar a través de Link to para rendizar distintas vistas:

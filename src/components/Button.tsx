@@ -1,36 +1,22 @@
 import { useState } from "react"
+import { Link } from "react-router-dom";
 
 import { Itoogle } from "../interface/Toogle";
-import { ButtonStyle } from "../styles/ButtonStyle.style"
+import { ButtonStyle, ValueStyle } from "../styles/ButtonStyle.style"
 
 
 
 
 export const Button:React.FC<Itoogle> = ({theme, toggleTheme}) => {
-    const [text, setText] = useState<string>("Take Picture");
-    const [error, setError] = useState<boolean>(false)
+    const [text] = useState<string>("Take Picture");
     const isPrimary = theme === "primary";
-
-    const changeName = () =>  {
-        console.log("CAMBIIOOOOOOOOO")
-        if(error) {
-            setText("Remake Picture")
-            setError(true)
-        } else {
-            setText("Take Picture")
-            setError(false)
-        }
-  
-    }
-
-    // useEffect (() => {
-    //     changeName()
-    // }, [])
-    
 
     return(
         <>  
-            <ButtonStyle {...isPrimary} onClick={toggleTheme}>
+            <ButtonStyle 
+                {...isPrimary} 
+                onClick={toggleTheme}>
+                    <Link to="/cam"><ValueStyle>{text}</ValueStyle></Link>
             </ButtonStyle>
         </>
     )

@@ -5,5 +5,6 @@ declare module 'styled-components'{
         body: string,
         color:string;
         gradient?: string
+        img?: string
     }
 }

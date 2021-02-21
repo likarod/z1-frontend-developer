@@ -1,27 +1,29 @@
-// import { useState } from "react"
-import React from "react";
-import { IFormat } from "../interface/imageProps";
+import { useContext } from 'react';
+import {ImageContext} from '../context/ImageContext'
+import { ContextType } from "../interface/imageProps";
 
 import { CardStyle } from "../styles/Card/Card.style";
+import IdCard from '../../src/assets/id_card.png'
 
 
-export const Card = ({src , alt, status}:IFormat) => {
-    // const [imageLoaded, setImageLoaded]= useState(false);
+
+
+export const Card:React.FC = () => {
+    const {image}= useContext(ImageContext) as ContextType;
+    // const ImagePath: string = images.src && IdCard
 
     return (
         <>  
 
-            
-                <CardStyle>
-                        
-                </CardStyle>
-             
-            {/* Renderizar la última foto que haya en el CONTEXT este será el consumer */}
-            {/* {imgSrc && (
+            <CardStyle>
+                 {/* Renderizar la última foto que haya en el CONTEXT este será el consumer */}
                 <img
-                src={src}
-                alt={alt}
-                />} */}
+                src={IdCard}
+                alt="Imagen de carga"
+                />       
+            </CardStyle>
+             
+           
 
         </>
     )
