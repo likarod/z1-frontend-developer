@@ -9,10 +9,12 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0 auto;
         padding: 1rem;
         max-width: 23.5rem;
+        height: 41.68rem;
         font-family: Roboto;
         background-color: ${props => props.theme.body};
-        color: ${props => props.theme.color}
-        height: 41.68rem;
+        color: ${props => props.theme.color};
+        transition: all 0.50s linear;
+        
         ${mediaQueries("lg")`
             display: flex;
             flex-direction: column;

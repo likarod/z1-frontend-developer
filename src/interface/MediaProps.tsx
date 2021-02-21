@@ -4,7 +4,7 @@ export interface IMediaProps {
     lg: number
 } 
 
-// Content
+// Global State
 export interface Content {
     width: number;
 }

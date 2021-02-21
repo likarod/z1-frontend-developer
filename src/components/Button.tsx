@@ -4,11 +4,17 @@ import { Link } from "react-router-dom";
 import { ButtonStyle } from "../styles/ButtonStyle.style"
 
 
+interface Itoogle {
+    theme:string
+    toggleTheme: any
+}
 
-
-export const Button = () => {
+export const Button:React.FC<Itoogle> = ({theme, toggleTheme}) => {
     const [text, setText] = useState<string>("Take Picture");
     const [error, setError] = useState<boolean>(false)
+    const isPrimary = theme === "primary";
+
+
 
 
     const changeName = () =>  {
@@ -25,7 +31,7 @@ export const Button = () => {
     return(
         <>  
             <Link to="/camara"> 
-                <ButtonStyle onClick={changeName} value={text}>
+                <ButtonStyle {...isPrimary} onClick={toggleTheme} onChange= {changeName}value={text}>
                     {/* <Label>{text}</Label>
                     <Camera></Camera>    */}
                 </ButtonStyle>

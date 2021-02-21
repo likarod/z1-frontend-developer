@@ -2,14 +2,14 @@ import styled from "styled-components";
 
 export const ButtonStyle = styled.button`
     position: relative;
-    left: 2.5rem;
+    left: 0.5rem;
     height: 3rem;
     width: 11.31rem;
     border-radius: 1.5rem;
     background-color: #2F0079;
 `
 
-export const Label = styled.label`
+export const ValueStyle = styled.label`
 height: 24px;
 width: 135.75px;
 color: #FFFFFF;
