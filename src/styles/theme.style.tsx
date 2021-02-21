@@ -3,7 +3,7 @@ import {DefaultTheme} from 'styled-components';
 
 export const primaryTheme:DefaultTheme = {
     body: "#FFFFFF",
-    color: "##000000",
+    color: "#000000",
     gradient: "linear-gradient(#39598A, #79D7ED)"
 }
 

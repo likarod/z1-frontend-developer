@@ -1,9 +1,11 @@
-import { useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import WebCam from 'react-webcam';
+
 import { Container } from '../styles/Container.style';
 
 
-export const Cam = () => {
+const Cam = () => {
     const webcamRef = useRef(null)
     const [newCapture, setCapture] = useState<string | undefined>(undefined);
 
@@ -18,7 +20,9 @@ export const Cam = () => {
                 width={264}
                 />
             </Container>
-            
+            <Link to="/">Cancelar</Link>
         </>
     )
 }
+
+export default React.memo(Cam)

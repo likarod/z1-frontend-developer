@@ -1,13 +1,17 @@
 import './App.css';
-import {BrowserRouter as Router} from 'react-router-dom'
+import {BrowserRouter} from 'react-router-dom'
 import { Main } from './components/Main';
 
 function App() {
   return (
     <>
-      <Router>
-        <Main/>
-      </Router>
+      <BrowserRouter>
+      <Main/>
+        {/* <Switch>  
+          <Route exact path="/" component={Main}/>
+          <Route exact path="/cam" component={Cam}/>
+        </Switch> */}
+      </BrowserRouter>
     </>
   );
 }

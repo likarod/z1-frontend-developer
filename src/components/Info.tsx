@@ -1,9 +1,10 @@
 import { Title } from "../styles/Info/Title.style"
 import { InfoText } from "../styles/Info/InfoText.style"
 import { Container } from "../styles/Container.style"
+import { Itoogle } from "../interface/Toogle"
 
 
-export const Info = () => {
+export const Info:React.FC<Itoogle> = ({theme}) => {
     return(
         <Container>
             <Title>
