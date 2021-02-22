@@ -3,28 +3,25 @@ import {ImageContext} from '../context/ImageContext'
 import { ContextType } from "../interface/imageProps";
 
 import { CardStyle } from "../styles/Card/Card.style";
-import IdCard from '../../src/assets/id_card.png'
+import  IdCard  from '../assets/Id/id_bg.svg'
+import Info  from './Info';
 
 
 
 
 export const Card:React.FC = () => {
     const {image}= useContext(ImageContext) as ContextType;
-    // const ImagePath: string = images.src && IdCard
+    const ImagePath: string = image[0].src 
 
     return (
-        <>  
-
+        <> 
+            <Info></Info>
             <CardStyle>
-                 {/* Renderizar la última foto que haya en el CONTEXT este será el consumer */}
                 <img
-                src={IdCard}
-                alt="Imagen de carga"
+                src={ImagePath && IdCard}
+                alt="Imagen de mockeada"
                 />       
             </CardStyle>
-             
-           
-
         </>
     )
 }

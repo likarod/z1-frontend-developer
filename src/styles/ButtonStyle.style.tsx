@@ -9,6 +9,23 @@ export const ButtonStyle = styled.button`
     background-color: #2F0079;
 `
 
+export const CancelStyle = styled.button`
+    height: 1.5rem;
+    width: 11.15rem;
+    margin-top: 2rem;
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    line-height: 1.5rem;
+    text-align: center;
+    outline: none;
+    border: none;
+    background: #141c26;
+`
+
+
 export const ValueStyle = styled.span`
 height: 24px;
 width: 135.75px;

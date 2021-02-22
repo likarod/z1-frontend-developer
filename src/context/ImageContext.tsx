@@ -7,7 +7,7 @@ export const ImageContext = createContext<ContextType | null>(null)
 export const ImageProvider:React.FC<React.ReactNode> = ( {children}) => {
     const [image, setImage] = useState<IFormat[]>([
         {   //Mockeo de la imagen
-            src: "./assets/id_card.png",
+            src: "/assets/id_card.png",
             alt: "Id de prueba",
             status: true
         }
